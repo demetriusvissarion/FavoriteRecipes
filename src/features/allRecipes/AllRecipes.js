@@ -5,7 +5,8 @@ import React, { useEffect } from "react";
 import FavoriteButton from "../../components/FavoriteButton";
 import Recipe from "../../components/Recipe";
 
-import favoriteIcon from "../../img/favorite.svg";
+const favoriteIconURL =
+  "https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/favorite.svg";
 
 export const AllRecipes = (props) => {
   const { allRecipes, dispatch } = props;
@@ -13,6 +14,8 @@ export const AllRecipes = (props) => {
   const onFirstRender = () => {
     dispatch(loadData());
   };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(onFirstRender, []);
 
   const onAddRecipeHandler = (recipe) => {
@@ -20,12 +23,12 @@ export const AllRecipes = (props) => {
   };
 
   return (
-    <div id="all-recipes" className="recipes-container">
+    <div className="recipes-container">
       {allRecipes.map((recipe) => (
         <Recipe recipe={recipe} key={recipe.id}>
           <FavoriteButton
             onClickHandler={() => onAddRecipeHandler(recipe)}
-            icon={favoriteIcon}
+            icon={favoriteIconURL}
           >
             Add to Favorites
           </FavoriteButton>

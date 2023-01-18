@@ -1,21 +1,21 @@
 import React from "react";
 import FavoriteButton from "../../components/FavoriteButton";
 import Recipe from "../../components/Recipe";
-// Import removeRecipe from favoriteRecipesSlice.js
+import { removeRecipe } from "./favoriteRecipesSlice.js";
 
 import unfavoriteIcon from "../../img/unfavorite.svg";
 
 export const FavoriteRecipes = (props) => {
-  // Extract dispatch and favoriteRecipes from props.
+  const { favoriteRecipes, dispatch } = props;
 
   const onRemoveRecipeHandler = (recipe) => {
-    // Dispatch a removeRecipe() action.
+    dispatch(removeRecipe(recipe));
   };
 
   // Map the recipe objects in favoriteRecipes to render <Recipe /> components.
   return (
     <div id="favorite-recipes" className="recipes-container">
-      {["REPLACE_ME"].map(createRecipeComponent)}
+      {favoriteRecipes.map(createRecipeComponent)}
     </div>
   );
 

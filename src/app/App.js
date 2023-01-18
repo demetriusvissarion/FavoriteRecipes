@@ -3,8 +3,7 @@ import React from "react";
 import { AllRecipes } from "../features/allRecipes/AllRecipes.js";
 import { SearchTerm } from "../features/searchTerm/SearchTerm.js";
 import "./index.css";
-
-// Import the FavoriteRecipes component here.
+import { FavoriteRecipes } from "../features/favoriteRecipes/FavoriteRecipes.js";
 
 export function App(props) {
   const { state, dispatch } = props;
@@ -18,8 +17,6 @@ export function App(props) {
     state.searchTerm
   );
 
-  // Render the <FavoriteRecipes /> component.
-  // Pass `dispatch` and `favoriteRecipes` props.
   return (
     <main>
       <section>
@@ -27,6 +24,10 @@ export function App(props) {
       </section>
       <section>
         <h2>Favorite Recipes</h2>
+        <FavoriteRecipes
+          favoriteRecipes={visibleFavoriteRecipes}
+          dispatch={dispatch}
+        />
       </section>
       <hr />
       <section>

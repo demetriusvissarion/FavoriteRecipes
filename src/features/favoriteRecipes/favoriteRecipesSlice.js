@@ -1,8 +1,12 @@
-// For this exercise only, the favoriteRecipes slice will contain the following initial recipes.
+// The favoriteRecipes slice will contain the following initial recipes.
+import biscuits from "../../img/biscuits.jpg";
+import bulgogi from "../../img/bulgogi.jpg";
+import calamari from "../../img/calamari.jpg";
+
 const initialState = [
-  { id: 0, name: "Biscuits", img: "img/biscuits.jpg" },
-  { id: 1, name: "Bulgogi", img: "img/bulgogi.jpg" },
-  { id: 2, name: "Calamari", img: "img/calamari.jpg" },
+  { id: 0, name: "Biscuits", img: biscuits },
+  { id: 1, name: "Bulgogi", img: bulgogi },
+  { id: 2, name: "Calamari", img: calamari },
 ];
 export const favoriteRecipesReducer = (
   favoriteRecipes = initialState,

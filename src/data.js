@@ -1,5 +1,3 @@
-import React from "react";
-
 import ceviche from "./img/ceviche.jpg";
 import cheeseburger from "./img/cheeseburger.jpg";
 import churrasco from "./img/churrasco.jpg";

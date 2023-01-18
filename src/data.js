@@ -1,12 +1,23 @@
+import React from "react";
+
+import ceviche from "./img/ceviche.jpg";
+import cheeseburger from "./img/cheeseburger.jpg";
+import churrasco from "./img/churrasco.jpg";
+import dumplings from "./img/dumplings.jpg";
+import fishnchips from "./img/fishnchips.jpg";
+import hummus from "./img/hummus.jpg";
+import masaladosa from "./img/masaladosa.jpg";
+import padthai from "./img/padthai.jpg";
+
 const allRecipesData = [
-  { id: 3, name: "Ceviche", img: "src/img/ceviche.jpg" },
-  { id: 4, name: "Cheeseburger", img: "src/img/cheeseburger.jpg" },
-  { id: 5, name: "Churrasco", img: "src/img/churrasco.jpg" },
-  { id: 6, name: "Dumplings", img: "src/img/dumplings.jpg" },
-  { id: 7, name: "Fish & Chips", img: "src/img/fishnchips.jpg" },
-  { id: 8, name: "Hummus", img: "src/img/hummus.jpg" },
-  { id: 9, name: "Masala Dosa", img: "src/img/masaladosa.jpg" },
-  { id: 10, name: "Pad Thai", img: "src/img/padthai.jpg" },
+  { id: 3, name: "Ceviche", img: ceviche },
+  { id: 4, name: "Cheeseburger", img: cheeseburger },
+  { id: 5, name: "Churrasco", img: churrasco },
+  { id: 6, name: "Dumplings", img: dumplings },
+  { id: 7, name: "Fish & Chips", img: fishnchips },
+  { id: 8, name: "Hummus", img: hummus },
+  { id: 9, name: "Masala Dosa", img: masaladosa },
+  { id: 10, name: "Pad Thai", img: padthai },
 ];
 
 export default allRecipesData;

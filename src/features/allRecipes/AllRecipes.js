@@ -5,8 +5,7 @@ import React, { useEffect } from "react";
 import FavoriteButton from "../../components/FavoriteButton";
 import Recipe from "../../components/Recipe";
 
-const favoriteIconURL =
-  "https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/favorite.svg";
+import favoriteIcon from "../../img/favorite.svg";
 
 export const AllRecipes = (props) => {
   const { allRecipes, dispatch } = props;
@@ -26,7 +25,7 @@ export const AllRecipes = (props) => {
         <Recipe recipe={recipe} key={recipe.id}>
           <FavoriteButton
             onClickHandler={() => onAddRecipeHandler(recipe)}
-            icon={favoriteIconURL}
+            icon={favoriteIcon}
           >
             Add to Favorites
           </FavoriteButton>

@@ -2,6 +2,7 @@ import React from "react";
 
 import { AllRecipes } from "../features/allRecipes/AllRecipes.js";
 import { SearchTerm } from "../features/searchTerm/SearchTerm.js";
+import "./index.css";
 
 // Import the FavoriteRecipes component here.
 

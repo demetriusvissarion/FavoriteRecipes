@@ -1,20 +1,25 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+
 import FavoriteButton from "../../components/FavoriteButton";
 import Recipe from "../../components/Recipe";
-import { removeRecipe } from "./favoriteRecipesSlice.js";
+import {
+  removeRecipe,
+  selectFilteredFavoriteRecipes,
+} from "./favoriteRecipesSlice.js";
 
 import unfavoriteIcon from "../../img/unfavorite.svg";
 
-export const FavoriteRecipes = (props) => {
-  const { favoriteRecipes, dispatch } = props;
+export const FavoriteRecipes = () => {
+  const favoriteRecipes = useSelector(selectFilteredFavoriteRecipes);
+  const dispatch = useDispatch();
 
   const onRemoveRecipeHandler = (recipe) => {
     dispatch(removeRecipe(recipe));
   };
 
-  // Map the recipe objects in favoriteRecipes to render <Recipe /> components.
   return (
-    <div id="favorite-recipes" className="recipes-container">
+    <div className="recipes-container">
       {favoriteRecipes.map(createRecipeComponent)}
     </div>
   );

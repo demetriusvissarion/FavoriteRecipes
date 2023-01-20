@@ -1,3 +1,5 @@
+import { selectSearchTerm } from "../searchTerm/searchTermSlice.js";
+
 // The favoriteRecipes slice will contain the following initial recipes.
 import biscuits from "../../img/biscuits.jpg";
 import bulgogi from "../../img/bulgogi.jpg";
@@ -37,3 +39,14 @@ export function removeRecipe(recipe) {
     payload: recipe,
   };
 }
+
+export const selectFavoriteRecipes = (state) => state.favoriteRecipes;
+
+export const selectFilteredFavoriteRecipes = (state) => {
+  const favoriteRecipes = selectFavoriteRecipes(state);
+  const searchTerm = selectSearchTerm(state);
+
+  return favoriteRecipes.filter((recipe) =>
+    recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+};

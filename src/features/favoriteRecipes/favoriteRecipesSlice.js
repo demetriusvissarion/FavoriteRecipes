@@ -1,44 +1,23 @@
+import { createSlice } from "@reduxjs/toolkit";
 import { selectSearchTerm } from "../searchTerm/searchTermSlice.js";
 
-// The favoriteRecipes slice will contain the following initial recipes.
-import biscuits from "../../img/biscuits.jpg";
-import bulgogi from "../../img/bulgogi.jpg";
-import calamari from "../../img/calamari.jpg";
-
-const initialState = [
-  { id: 0, name: "Biscuits", img: biscuits },
-  { id: 1, name: "Bulgogi", img: bulgogi },
-  { id: 2, name: "Calamari", img: calamari },
-];
-export const favoriteRecipesReducer = (
-  favoriteRecipes = initialState,
-  action
-) => {
-  switch (action.type) {
-    case "favoriteRecipes/addRecipe":
-      return [...favoriteRecipes, action.payload];
-    case "favoriteRecipes/removeRecipe":
-      return favoriteRecipes.filter(
-        (recipe) => recipe.id !== action.payload.id
-      );
-    default:
-      return favoriteRecipes;
-  }
+/* Create your Slice object here. */
+const options = {
+  name: "favoriteRecipes",
+  initialState: [],
+  reducers: {
+    addRecipe: (state, action) => {
+      return [...state, action.payload];
+    },
+    removeRecipe: (state, action) => {
+      return state.filter((recipe) => recipe.id !== action.payload.id);
+    },
+  },
 };
 
-export function addRecipe(recipe) {
-  return {
-    type: "favoriteRecipes/addRecipe",
-    payload: recipe,
-  };
-}
+export const favoriteRecipesSlice = createSlice(options);
 
-export function removeRecipe(recipe) {
-  return {
-    type: "favoriteRecipes/removeRecipe",
-    payload: recipe,
-  };
-}
+/* Do not delete the code below...*/
 
 export const selectFavoriteRecipes = (state) => state.favoriteRecipes;
 

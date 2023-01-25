@@ -4,12 +4,13 @@ import { useSelector, useDispatch } from "react-redux";
 import FavoriteButton from "../../components/FavoriteButton";
 import Recipe from "../../components/Recipe";
 import {
-  removeRecipe,
+  favoriteRecipesSlice,
   selectFilteredFavoriteRecipes,
 } from "./favoriteRecipesSlice.js";
 
 import unfavoriteIcon from "../../img/unfavorite.svg";
 
+const { removeRecipe } = favoriteRecipesSlice.actions;
 export const FavoriteRecipes = () => {
   const favoriteRecipes = useSelector(selectFilteredFavoriteRecipes);
   const dispatch = useDispatch();

@@ -5,7 +5,7 @@ import biscuits from "../../img/biscuits.jpg";
 import bulgogi from "../../img/bulgogi.jpg";
 import calamari from "../../img/calamari.jpg";
 
-/* Create your Slice object here. */
+/* Slice object */
 const options = {
   name: "favoriteRecipes",
   initialState: [
@@ -44,3 +44,5 @@ export const selectFilteredFavoriteRecipes = (state) => {
 // }
 
 export const { addRecipe, removeRecipe } = favoriteRecipesSlice.actions;
+
+export default favoriteRecipesSlice.reducer;

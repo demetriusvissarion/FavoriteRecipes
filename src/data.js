@@ -1,3 +1,6 @@
+import biscuits from "./img/biscuits.jpg";
+import bulgogi from "./img/bulgogi.jpg";
+import calamari from "./img/calamari.jpg";
 import ceviche from "./img/ceviche.jpg";
 import cheeseburger from "./img/cheeseburger.jpg";
 import churrasco from "./img/churrasco.jpg";
@@ -8,6 +11,9 @@ import masaladosa from "./img/masaladosa.jpg";
 import padthai from "./img/padthai.jpg";
 
 const allRecipesData = [
+  { id: 0, name: "Biscuits", img: biscuits },
+  { id: 1, name: "Bulgogi", img: bulgogi },
+  { id: 2, name: "Calamari", img: calamari },
   { id: 3, name: "Ceviche", img: ceviche },
   { id: 4, name: "Cheeseburger", img: cheeseburger },
   { id: 5, name: "Churrasco", img: churrasco },

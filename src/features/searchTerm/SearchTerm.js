@@ -6,8 +6,11 @@ import {
   clearSearchTerm,
   selectSearchTerm,
 } from "./searchTermSlice.js";
-import searchIcon from "../../img/search.svg";
-import clearIcon from "../../img/clear.svg";
+
+const searchIconUrl =
+  "https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/search.svg";
+const clearIconUrl =
+  "https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/clear.svg";
 
 export const SearchTerm = () => {
   const searchTerm = useSelector(selectSearchTerm);
@@ -24,7 +27,7 @@ export const SearchTerm = () => {
 
   return (
     <div id="search-container">
-      <img id="search-icon" alt="" src={searchIcon} />
+      <img id="search-icon" alt="" src={searchIconUrl} />
       <input
         id="search"
         type="text"
@@ -38,7 +41,7 @@ export const SearchTerm = () => {
           type="button"
           id="search-clear-button"
         >
-          <img src={clearIcon} alt="" />
+          <img src={clearIconUrl} alt="" />
         </button>
       )}
     </div>

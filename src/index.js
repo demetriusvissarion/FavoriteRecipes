@@ -3,15 +3,11 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
 import { App } from "./app/App.js";
-import { store } from "./app/store.js";
+import store from "./app/store.js";
 
-const render = () => {
-  ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-    document.getElementById("root")
-  );
-};
-store.subscribe(render);
-render();
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);

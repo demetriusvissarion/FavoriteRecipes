@@ -1,18 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { selectSearchTerm } from "../searchTerm/searchTermSlice.js";
 
-import biscuits from "../../img/biscuits.jpg";
-import bulgogi from "../../img/bulgogi.jpg";
-import calamari from "../../img/calamari.jpg";
-
-/* Slice object */
-const options = {
+export const favoriteRecipesSlice = createSlice({
   name: "favoriteRecipes",
-  initialState: [
-    { id: 0, name: "Biscuits", img: biscuits },
-    { id: 1, name: "Bulgogi", img: bulgogi },
-    { id: 2, name: "Calamari", img: calamari },
-  ],
+  initialState: [],
   reducers: {
     addRecipe: (state, action) => {
       state.push(action.payload);
@@ -21,11 +12,7 @@ const options = {
       return state.filter((recipe) => recipe.id !== action.payload.id);
     },
   },
-};
-
-export const favoriteRecipesSlice = createSlice(options);
-
-/* Do not delete the code below...*/
+});
 
 export const selectFavoriteRecipes = (state) => state.favoriteRecipes;
 
@@ -37,11 +24,6 @@ export const selectFilteredFavoriteRecipes = (state) => {
     recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 };
-
-// console.log(favoriteRecipesSlice.name);
-// for (const action in favoriteRecipesSlice.actions) {
-//   console.log(action);
-// }
 
 export const { addRecipe, removeRecipe } = favoriteRecipesSlice.actions;
 

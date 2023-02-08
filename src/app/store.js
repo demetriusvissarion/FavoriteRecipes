@@ -1,13 +1,12 @@
-import favoriteRecipesReducer from "../features/favoriteRecipes/favoriteRecipesSlice.js";
-import searchTermReducer from "../features/searchTerm/searchTermSlice.js";
-import allRecipesReducer from "../features/allRecipes/allRecipesSlice.js";
-
 import { configureStore } from "@reduxjs/toolkit";
+import allRecipesReducer from "../features/allRecipes/allRecipesSlice";
+import favoriteRecipesReducer from "../features/favoriteRecipes/favoriteRecipesSlice";
+import searchReducer from "../features/search/searchSlice";
 
 export default configureStore({
   reducer: {
-    favoriteRecipes: favoriteRecipesReducer,
-    searchTerm: searchTermReducer,
     allRecipes: allRecipesReducer,
+    favoriteRecipes: favoriteRecipesReducer,
+    search: searchReducer,
   },
 });

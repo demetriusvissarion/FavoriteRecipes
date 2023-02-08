@@ -9,6 +9,15 @@ import fishnchips from "./img/fishnchips.jpg";
 import hummus from "./img/hummus.jpg";
 import masaladosa from "./img/masaladosa.jpg";
 import padthai from "./img/padthai.jpg";
+import pho from "./img/pho.jpg";
+import pizza from "./img/pizza.jpg";
+import putine from "./img/putine.jpg";
+import ramen from "./img/ramen.jpg";
+import spaghetti from "./img/spaghetti.jpg";
+import spammusubi from "./img/spammusubi.jpg";
+import somtam from "./img/somtam.jpg";
+import sushi from "./img/sushi.jpg";
+import tacos from "./img/tacos.jpg";
 
 const allRecipesData = [
   { id: 0, name: "Biscuits", img: biscuits },
@@ -22,6 +31,15 @@ const allRecipesData = [
   { id: 8, name: "Hummus", img: hummus },
   { id: 9, name: "Masala Dosa", img: masaladosa },
   { id: 10, name: "Pad Thai", img: padthai },
+  { id: 11, name: "Pho", img: pho },
+  { id: 12, name: "Pizza", img: pizza },
+  { id: 13, name: "Putine", img: putine },
+  { id: 14, name: "Ramen", img: ramen },
+  { id: 15, name: "Spaghetti", img: spaghetti },
+  { id: 16, name: "Spam musubi", img: spammusubi },
+  { id: 17, name: "Som tam", img: somtam },
+  { id: 18, name: "Sushi", img: sushi },
+  { id: 19, name: "Tacos", img: tacos },
 ];
 
 export default allRecipesData;

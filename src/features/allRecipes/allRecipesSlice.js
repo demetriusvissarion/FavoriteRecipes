@@ -5,10 +5,13 @@ import {
 } from "../favoriteRecipes/favoriteRecipesSlice";
 import { selectSearchTerm } from "../search/searchSlice";
 
+import allRecipesData from "../../data";
+
+// createAsyncThunk simplifies our Redux app by returning an action creator that dispatches promise lifecycle actions for us so we don't have to dispatch them ourselves.
 export const loadRecipes = createAsyncThunk(
   "allRecipes/getAllRecipes",
   async () => {
-    const data = await fetch("api/recipes?limit=10");
+    const data = await fetch("../data.js");
     const json = await data.json();
     return json;
   }

@@ -11,7 +11,7 @@ import masaladosa from "./img/masaladosa.jpg";
 import padthai from "./img/padthai.jpg";
 import pho from "./img/pho.jpg";
 import pizza from "./img/pizza.jpg";
-import putine from "./img/putine.jpg";
+import poutine from "./img/poutine.jpg";
 import ramen from "./img/ramen.jpg";
 import spaghetti from "./img/spaghetti.jpg";
 import spammusubi from "./img/spammusubi.jpg";
@@ -33,7 +33,7 @@ const allRecipesData = [
   { id: 10, name: "Pad Thai", img: padthai },
   { id: 11, name: "Pho", img: pho },
   { id: 12, name: "Pizza", img: pizza },
-  { id: 13, name: "Putine", img: putine },
+  { id: 13, name: "Poutine", img: poutine },
   { id: 14, name: "Ramen", img: ramen },
   { id: 15, name: "Spaghetti", img: spaghetti },
   { id: 16, name: "Spam musubi", img: spammusubi },

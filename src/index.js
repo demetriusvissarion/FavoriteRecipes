@@ -2,8 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
-import App from "./app/App.js";
+import App from "./App.js";
 import store from "./app/store.js";
+
+const { worker } = require("./mocks/browser");
+worker.start();
 
 ReactDOM.render(
   <React.StrictMode>

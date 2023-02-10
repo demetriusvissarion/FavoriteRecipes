@@ -1,5 +1,7 @@
 import React from "react";
 
+// import allRecipesData from "../data";
+
 export default function Recipe({ recipe, children }) {
   return (
     <div key={recipe.id} className="recipe" tabIndex={0}>
